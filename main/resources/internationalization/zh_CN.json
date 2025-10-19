@@ -1,0 +1,8 @@
+{
+  "menu.setting_menu" : "设置(S)",
+  "action.language_setting_action" : "语言",
+  "action.quit_setting_action" : "退出",
+  "menu.help_menu" : "帮助(H)",
+  "action.about_action": "关于",
+  "menu.mode_menu": "模式(M)"
+}

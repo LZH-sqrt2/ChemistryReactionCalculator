@@ -1,0 +1,7 @@
+{
+  "menu.setting_menu" : "設定(S)",
+  "action.language_setting_action" : "言語設定",
+  "action.quit_setting_action" : "終了",
+  "menu.help_menu" : "ヘルプ(H)",
+  "action.about_action": "について"
+}
