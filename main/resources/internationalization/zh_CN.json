@@ -4,5 +4,6 @@
   "action.quit_setting_action" : "退出",
   "menu.help_menu" : "帮助(H)",
   "action.about_action": "关于",
-  "menu.mode_menu": "模式(M)"
+  "menu.mode_menu": "模式(M)",
+  "label.reactant": "反应物"
 }

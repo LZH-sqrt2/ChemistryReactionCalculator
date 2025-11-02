@@ -14,5 +14,8 @@ def translatable_text(text: str) -> str:
     try:
         return translation_text[text]
     except KeyError:
-        return text
+        if language != "en_US":
+            return text
+        else:
+            return text[text.find(".") + 1: len(text)]
 

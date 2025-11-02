@@ -19,12 +19,20 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.mode_menu = None
 
+        self.label = None
+
         self.title: str = "ChemistryReactionCalculator"
         self.icon: str = "../resources/image/icon.png"
+
+        self.namespace = "chemistry_reaction_calculator"
 
         self.init_ui()
 
     def init_ui(self):
+        #central_widget
+        central_widget = QtWidgets.QWidget()
+        self.setCentralWidget(central_widget)
+
         self.setWindowTitle(self.title)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(self.icon), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -47,8 +55,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.help_menu.addAction(self.about_action)
 
-    def create_reaction_input_group(self):
-        pass
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
