@@ -5,6 +5,9 @@
 #include <memory>
 #include <unordered_map>
 #include <string>
+#include <vector>
+
+namespace ChemistryReactionCalculator {
 
 class EquationRegistry {
 public:
@@ -15,6 +18,8 @@ public:
     [[nodiscard]] std::shared_ptr<Equation> getEquation(const std::string& name) const;
 
     [[nodiscard]] bool hasEquation(const std::string& name) const;
+
+    [[nodiscard]] std::vector<std::string> getAllEquationNames() const;
 
 private:
     EquationRegistry() = default;
@@ -28,5 +33,9 @@ inline void registerEquation(const std::string& name, std::shared_ptr<Equation> 
 inline std::shared_ptr<Equation> getEquation(const std::string& name) {
     return EquationRegistry::instance().getEquation(name);
 }
+
+void registerDefaultEquations();
+
+} // namespace ChemistryReactionCalculator
 
 #endif // EQUATION_REGISTRY_H

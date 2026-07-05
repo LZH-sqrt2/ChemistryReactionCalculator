@@ -3,9 +3,9 @@
 
 #include <string>
 #include <vector>
-#include <memory>
 #include <any>
-#include <unordered_map>
+
+namespace ChemistryReactionCalculator {
 
 enum class EquationType
 {
@@ -34,5 +34,7 @@ public:
 
     [[nodiscard]] virtual SolverResult solve(const std::vector<double>& params) = 0;
 };
+
+} // namespace ChemistryReactionCalculator
 
 #endif // EQUATION_H
