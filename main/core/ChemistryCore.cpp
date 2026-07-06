@@ -1,11 +1,13 @@
 #include "ChemistryCore.h"
 
-ChemistryCore::ChemistryCore()
+namespace ChemistryReactionCalculator
 {
-    initializeElements();
-}
+    ChemistryCore::ChemistryCore()
+    {
+        initializeElements();
+    }
 
-void ChemistryCore::initializeElements()
-{
-
-}
+    void ChemistryCore::initializeElements()
+    {
+    }
+} // namespace ChemistryReactionCalculator

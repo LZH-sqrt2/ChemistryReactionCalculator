@@ -6,8 +6,8 @@
 #include <string>
 #include <memory>
 
-namespace ChemistryReactionCalculator {
-
+namespace ChemistryReactionCalculator
+{
     class ISolver
     {
     public:
@@ -21,7 +21,6 @@ namespace ChemistryReactionCalculator {
         [[nodiscard]] virtual EquationType getSupportedType() const = 0;
         [[nodiscard]] virtual std::string getSolverName() const = 0;
     };
-
 } // namespace ChemistryReactionCalculator
 
 #endif // ISOLVER_H

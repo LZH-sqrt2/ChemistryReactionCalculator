@@ -1,13 +1,16 @@
 #ifndef CHEMISTRYCORE_H
 #define CHEMISTRYCORE_H
 
-class ChemistryCore
+namespace ChemistryReactionCalculator
 {
-public:
-    ChemistryCore();
+    class ChemistryCore
+    {
+    public:
+        ChemistryCore();
 
-private:
-    static void initializeElements();
-};
+    private:
+        static void initializeElements();
+    };
+} // namespace ChemistryReactionCalculator
 
 #endif

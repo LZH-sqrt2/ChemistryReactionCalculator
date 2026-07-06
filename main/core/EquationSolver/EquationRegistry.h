@@ -7,35 +7,37 @@
 #include <string>
 #include <vector>
 
-namespace ChemistryReactionCalculator {
+namespace ChemistryReactionCalculator
+{
+    class EquationRegistry
+    {
+    public:
+        static EquationRegistry& instance();
 
-class EquationRegistry {
-public:
-    static EquationRegistry& instance();
+        void registerEquation(const std::string& name, std::shared_ptr<Equation> equation);
 
-    void registerEquation(const std::string& name, std::shared_ptr<Equation> equation);
+        [[nodiscard]] std::shared_ptr<Equation> getEquation(const std::string& name) const;
 
-    [[nodiscard]] std::shared_ptr<Equation> getEquation(const std::string& name) const;
+        [[nodiscard]] bool hasEquation(const std::string& name) const;
 
-    [[nodiscard]] bool hasEquation(const std::string& name) const;
+        [[nodiscard]] std::vector<std::string> getAllEquationNames() const;
 
-    [[nodiscard]] std::vector<std::string> getAllEquationNames() const;
+    private:
+        EquationRegistry() = default;
+        std::unordered_map<std::string, std::shared_ptr<Equation>> equations_;
+    };
 
-private:
-    EquationRegistry() = default;
-    std::unordered_map<std::string, std::shared_ptr<Equation>> equations_;
-};
+    inline void registerEquation(const std::string& name, std::shared_ptr<Equation> eq)
+    {
+        EquationRegistry::instance().registerEquation(name, std::move(eq));
+    }
 
-inline void registerEquation(const std::string& name, std::shared_ptr<Equation> eq) {
-    EquationRegistry::instance().registerEquation(name, std::move(eq));
-}
+    inline std::shared_ptr<Equation> getEquation(const std::string& name)
+    {
+        return EquationRegistry::instance().getEquation(name);
+    }
 
-inline std::shared_ptr<Equation> getEquation(const std::string& name) {
-    return EquationRegistry::instance().getEquation(name);
-}
-
-void registerDefaultEquations();
-
+    void registerDefaultEquations();
 } // namespace ChemistryReactionCalculator
 
 #endif // EQUATION_REGISTRY_H

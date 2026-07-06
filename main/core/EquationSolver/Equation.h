@@ -5,36 +5,37 @@
 #include <vector>
 #include <any>
 
-namespace ChemistryReactionCalculator {
-
-enum class EquationType
+namespace ChemistryReactionCalculator
 {
-    OrdinaryDifferential,
-    PartialDifferential,
-    Transcendental,
-    Polynomial,
-    LinearSystem
-};
+    ‘
 
-struct SolverResult
-{
-    bool success;
-    std::string errorMessage;
-    std::any solution;
-};
+    enum class EquationType
+    {
+        OrdinaryDifferential,
+        PartialDifferential,
+        Transcendental,
+        Polynomial,
+        LinearSystem
+    };
 
-class Equation
-{
-public:
-    virtual ~Equation() = default;
+    struct SolverResult
+    {
+        bool success;
+        std::string errorMessage;
+        std::any solution;
+    };
 
-    [[nodiscard]] virtual EquationType getType() const = 0;
-    [[nodiscard]] virtual std::string getEquationName() const = 0;
-    [[nodiscard]] virtual std::string getOriginalDescription() const = 0;
+    class Equation
+    {
+    public:
+        virtual ~Equation() = default;
 
-    [[nodiscard]] virtual SolverResult solve(const std::vector<double>& params) = 0;
-};
+        [[nodiscard]] virtual EquationType getType() const = 0;
+        [[nodiscard]] virtual std::string getEquationName() const = 0;
+        [[nodiscard]] virtual std::string getOriginalDescription() const = 0;
 
+        [[nodiscard]] virtual SolverResult solve(const std::vector<double>& params) = 0;
+    };
 } // namespace ChemistryReactionCalculator
 
 #endif // EQUATION_H
