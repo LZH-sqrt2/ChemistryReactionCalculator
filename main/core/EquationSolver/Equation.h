@@ -7,8 +7,6 @@
 
 namespace ChemistryReactionCalculator
 {
-    ‘
-
     enum class EquationType
     {
         OrdinaryDifferential,
@@ -30,7 +28,7 @@ namespace ChemistryReactionCalculator
     public:
         virtual ~Equation() = default;
 
-        [[nodiscard]] virtual EquationType getType() const = 0;
+        [[nodiscard]] virtual EquationType getEquationType() const = 0;
         [[nodiscard]] virtual std::string getEquationName() const = 0;
         [[nodiscard]] virtual std::string getOriginalDescription() const = 0;
 

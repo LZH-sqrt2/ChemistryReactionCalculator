@@ -9,7 +9,7 @@ namespace ChemistryReactionCalculator
     class GibbsFreeEnergyEquation final : public Equation
     {
     public:
-        [[nodiscard]] EquationType getType() const override { return EquationType::Transcendental; }
+        [[nodiscard]] EquationType getEquationType() const override { return EquationType::Transcendental; }
         [[nodiscard]] std::string getEquationName() const override { return "Gibbs Free Energy"; }
 
         [[nodiscard]] std::string getOriginalDescription() const override
@@ -29,7 +29,7 @@ namespace ChemistryReactionCalculator
     class VantHoffEquation final : public Equation
     {
     public:
-        [[nodiscard]] EquationType getType() const override { return EquationType::Transcendental; }
+        [[nodiscard]] EquationType getEquationType() const override { return EquationType::Transcendental; }
         [[nodiscard]] std::string getEquationName() const override { return "Van't Hoff Equation"; }
 
         [[nodiscard]] std::string getOriginalDescription() const override
@@ -49,7 +49,7 @@ namespace ChemistryReactionCalculator
     class ArrheniusEquation final : public Equation
     {
     public:
-        [[nodiscard]] EquationType getType() const override { return EquationType::Transcendental; }
+        [[nodiscard]] EquationType getEquationType() const override { return EquationType::Transcendental; }
         [[nodiscard]] std::string getEquationName() const override { return "Arrhenius Equation"; }
 
         [[nodiscard]] std::string getOriginalDescription() const override
@@ -69,7 +69,7 @@ namespace ChemistryReactionCalculator
     class IdealGasEquation final : public Equation
     {
     public:
-        [[nodiscard]] EquationType getType() const override { return EquationType::Transcendental; }
+        [[nodiscard]] EquationType getEquationType() const override { return EquationType::Transcendental; }
         [[nodiscard]] std::string getEquationName() const override { return "Ideal Gas Law"; }
 
         [[nodiscard]] std::string getOriginalDescription() const override
@@ -89,7 +89,7 @@ namespace ChemistryReactionCalculator
     class CoulombEnergyEquation final : public Equation
     {
     public:
-        [[nodiscard]] EquationType getType() const override { return EquationType::Transcendental; }
+        [[nodiscard]] EquationType getEquationType() const override { return EquationType::Transcendental; }
         [[nodiscard]] std::string getEquationName() const override { return "Coulomb Energy"; }
 
         [[nodiscard]] std::string getOriginalDescription() const override

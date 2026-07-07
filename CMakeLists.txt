@@ -19,12 +19,16 @@ add_library(ChemistryReactionCalculator SHARED
         main/core/EquationSolver/EquationRegistry.cpp
         main/core/EquationSolver/EquationRegistry.h
         main/core/EquationSolver/Equations.h
+        main/core/Registry/IRegistry.h
+        main/core/Registry/Registry.h
+        main/Core/Registry/Registry.cpp
+        main/Core/Registry/RegistryBuilder.h
 )
 
 set_target_properties(ChemistryReactionCalculator PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
-        LIBRARY_OUTPUT_DIRECTORY main/lib
-        ARCHIVE_OUTPUT_DIRECTORY main/lib)
+        LIBRARY_OUTPUT_DIRECTORY main/Lib
+        ARCHIVE_OUTPUT_DIRECTORY main/Lib)
 
 target_link_libraries(ChemistryReactionCalculator PUBLIC ${JSONCPP_LIBRARIES})
 target_include_directories(ChemistryReactionCalculator PUBLIC ${JSONCPP_INCLUDE_DIRS})
