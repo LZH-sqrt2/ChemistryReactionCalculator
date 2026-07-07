@@ -8,19 +8,19 @@ pkg_check_modules(JSONCPP REQUIRED jsoncpp)
 find_package(Python REQUIRED)
 find_package(nanobind CONFIG REQUIRED)
 
-include_directories(main/core)
+include_directories(main/Core)
 
 add_library(ChemistryReactionCalculator SHARED
-        main/core/DataType.h
-        main/core/ChemistryCore.cpp
-        main/core/ChemistryCore.h
-        main/core/EquationSolver/Equation.h
-        main/core/EquationSolver/ISolver.h
-        main/core/EquationSolver/EquationRegistry.cpp
-        main/core/EquationSolver/EquationRegistry.h
-        main/core/EquationSolver/Equations.h
-        main/core/Registry/IRegistry.h
-        main/core/Registry/Registry.h
+        main/Core/DataType.h
+        main/Core/ChemistryCore.cpp
+        main/Core/ChemistryCore.h
+        main/Core/EquationSolver/Equation.h
+        main/Core/EquationSolver/ISolver.h
+        main/Core/EquationSolver/EquationRegistry.cpp
+        main/Core/EquationSolver/EquationRegistry.h
+        main/Core/EquationSolver/Equations.h
+        main/Core/Registry/IRegistry.h
+        main/Core/Registry/Registry.h
         main/Core/Registry/Registry.cpp
         main/Core/Registry/RegistryBuilder.h
 )

@@ -1,0 +1,9 @@
+{
+  "menu.setting_menu": "Setting (S)",
+  "action.language_setting_action": "language",
+  "action.quit_setting_action": "Withdraw",
+  "menu.help_menu": "Help (H)",
+  "action.about_action": "About",
+  "menu.mode_menu": "Mode (M)",
+  "label.reactant": "Reactant:"
+}
